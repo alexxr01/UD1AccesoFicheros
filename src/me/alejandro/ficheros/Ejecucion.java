@@ -1,5 +1,9 @@
 package me.alejandro.ficheros;
 
+/**
+ * Clase principal para ejecuciones
+ */
+
 import java.io.IOException;
 
 public class Ejecucion {
