@@ -1,5 +1,11 @@
 package me.alejandro.ficheros;
 
+/**
+ * Metodos para ejercicios de ficheros
+ * @author Alejandro Ruiz Bonillo
+ * @version 1.0
+ */
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
