@@ -1,26 +1,22 @@
 package me.alejandro.bytes;
 
-import java.io.DataOutputStream;
+import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Scanner;
 
 /**
  * Ejercicios en clase
- * @author usuario
- *
+ * @author Alejandro Ruiz Bonillo
+ * @version 1.0
  */
 
 public class EjerciciosClase {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		EjerciciosClase ejecutar = new EjerciciosClase();
 		ejecutar.ejercicio1(); // Ejecución ejercicio 1
 		ejecutar.ejercicio2(); // Ejecución ejercicio 2
@@ -45,30 +41,19 @@ public class EjerciciosClase {
 			in.close();
 			out.close();
 
-			System.out.println("Copiado correctamente.");
+			System.out.println("Copiado correctamente el ejercicio 1.");
 
 		} catch (IOException e){
-			System.out.println("Hay un error.");
+			System.out.println("Hay un error en el ejercicio 1.");
 			e.printStackTrace();
 		}
 	}
 
-	public void ejercicio2() throws FileNotFoundException {
-		int num1, num2, num3, num4;
-		Scanner sc = new Scanner(System.in);
+	public void ejercicio2() throws IOException {
+		File archivo = new File("datos.dat"); // Fichero a utilizar
 		
-		FileOutputStream fos = new FileOutputStream("datos.dat");
-		DataOutputStream dos = new DataOutputStream(fos);
-		
-		System.out.println("Introduce nº1:");
-		num1 = sc.nextInt();
-		System.out.println("Introduce nº2:");
-		num2 = sc.nextInt();
-		System.out.println("Introduce nº3:");
-		num3 = sc.nextInt();
-		System.out.println("Introduce nº4:");
-		num4 = sc.nextInt();
-		
+		FileInputStream fos = new FileInputStream(archivo);
+		DataInputStream dis = new DataInputStream(fos);
 		
 		
 		
